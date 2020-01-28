@@ -41,5 +41,5 @@ Scripts used for custom polyA-filtering of these data are provided [here](./raw_
 
 
 ### Splicing Quantification
-Custom scripts used to quantify splicing status are found [here](MEL_LRS/splicing_quantification).
+Custom scripts used to quantify splicing status are found in the [splicing_quantification](MEL_LRS/splicing_quantification) directory.
 
