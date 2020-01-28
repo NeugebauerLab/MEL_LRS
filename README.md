@@ -39,3 +39,4 @@ ADAPTERS = [
 		            end_sequence=('IIA-seq-rrc', 'AAGCAGTGGTATCAACGCAGAGTAC'))
                 ]
 ```
+Scripts used for custom polyA-filtering of these data are provided [here](./raw_data_processing/scripts).
