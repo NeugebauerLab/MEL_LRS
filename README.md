@@ -8,7 +8,7 @@ This repository contains code to process and analyze PacBio long read sequencing
 
 
 ### Pre-processing, mapping, and filtering raw data
-The easiest way to download the raw FASTQ data associated with this project is from the [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra). A snakemake workflow is provided to trim, map, and filter the data for both genome-wide and targeted datasets. Download the [raw_data_processing](/raw_data_processing) directory, and move raw data in FASTQ format to a new folder called ```0_samples```. You will also need to add to this directory a genome file (in FASTA format) and an index file for mapping to the mm10 genome. These files should be called ```genome.fa``` and ```genome.fai```. Information for downloading the mm10 genome sequence can be found at [UCSC](https://hgdownload.soe.ucsc.edu/downloads.html). 
+The easiest way to download the raw FASTQ data associated with this project is from the [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra). A snakemake workflow is provided to trim, map, and filter the data for both genome-wide and targeted datasets. Download the [raw_data_processing](/raw_data_processing) directory, and move raw data in FASTQ format to a new folder called ```./data/0_samples```. You will also need to add to this directory a genome file (in FASTA format) and an index file for mapping to the mm10 genome. These files should be called ```genome.fa``` and ```genome.fai```. Information for downloading the mm10 genome sequence can be found at [UCSC](https://hgdownload.soe.ucsc.edu/downloads.html). 
 
 1. Create conda environment with necessary dependencies from conda environment file:
 ```
@@ -40,3 +40,8 @@ ADAPTERS = [
                 ]
 ```
 Scripts used for custom polyA-filtering of these data are provided [here](./raw_data_processing/scripts).
+
+
+### Generating Splicing and Readthrough Quantification Files
+Custom scripts used to quantify splicing status, spling intermediates, and readthrough transcription are found [here](MEL_LRS/quantification_scripts).
+
