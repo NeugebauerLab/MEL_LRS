@@ -1,6 +1,6 @@
 '''
 This script filters out unmapped reads and reads with soft-clipped alignments of polyA or polyT sequence (non-templated As and Ts)
-Usage: filter_polyA.py file.sam > filtered_file.sam
+Usage: python3 filter_polyA_HBB.py input_file.sam > polyA_filtered_output.sam
 Author: Kirsten Reimer
 '''
 
