@@ -1,13 +1,15 @@
 '''
 This script filters out unmapped reads and reads with soft-clipped alignments of polyA or polyT sequence (non-templated As and Ts)
+Usage: filter_polyA.py file.sam > filtered_file.sam
+Author: Kirsten Reimer
 '''
 
 import os
 import sys
 import re
-from snakemake.utils import report
 
-with open(snakemake.input) as f:
+file = sys.argv[1]
+with open(file, 'r') as f:
 
     for line in f:
         line = line.strip('\n')
