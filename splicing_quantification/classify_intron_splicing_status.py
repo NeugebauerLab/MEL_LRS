@@ -1,15 +1,13 @@
 '''
 classify_intron_splicing_status.py
 Author: Kirsten Reimer
-Usage: python3 get_only_spliced_junc.py input_junction_spanning_reads.bed > output_spliced_junction_spanning_reads.bed
 This script filters only spliced reads from all intron-spanning reads.
 Input file should be a BED12 file that has been intersected with a BED6 file of intron coordinates +/- 1 nt using bedtools intersect, e.g. "bedtools intersect -b introns_plus_1.bed -a data.bed -split -F 1 > junction_spanning_reads.bed"
 '''
 
-bed_filepath = "/Users/claudiamimoso/Desktop/Unspliced_counts/dmso_junction_spanning_reads.bed" 
+bed_filepath = "../input_junction_spanning_reads.bed"
 bed_file = open(bed_filepath)
-
-output = open("/Users/claudiamimoso/Desktop/Unspliced_counts/dmso_junction_spanning_reads_splicing_status.bed", "w")
+output = open("../junction_spanning_reads_splicing_status.bed", "w")
 
 for line in bed_file:
     col = line.rstrip().split("\t")
