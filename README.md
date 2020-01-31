@@ -5,16 +5,18 @@ This repository contains code to process and analyze PacBio long read sequencing
 1) Code related to filtering and mapping data
 2) Code related to quantifying splicing
 
-### raw_data_processing
+### Raw Data Processing
 * [data](./raw_data_processing/data) folder contains:
 	* genome file of GLOBE vector sequence used to map HBB-targeted long read sequencing data
 	* genome index of GLOBE vector sequene
 	
 * [scripts](./raw_data_processing/scripts) folder contains:
-	* python script for removing polyA reads from mm10 genome wide data (filter_polyA.py)
-	* python script for removing polyA reads from HBB-targeted data (filter_polyA_HBB.py)
+	* filter_polyA.py: script for removing polyA reads from mm10 genome wide data
+	* filter_polyA_HBB.py: script for removing polyA reads from HBB-targeted data
 
 
 ### Splicing Quantification
-Custom scripts used to quantify splicing status are found in the [splicing_quantification](MEL_LRS/splicing_quantification) directory.
-
+* [splicing_quantification](MEL_LRS/splicing_quantification) directory folder contains:
+	* calculate_distance_to_splicing.py: script to calculate the last block size and upstream intron coordinates from a BED12 file
+	* classify_cigar.py: script to separate a SAM file based on whether CIGAR string indicates spliced or unspliced
+	* classify_intron_splicing_status.py: script to classify splicing status of each intron-spanning region of long read sequences in BED12 format
