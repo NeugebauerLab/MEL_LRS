@@ -1,0 +1,22 @@
+name: pacbio
+channels:
+  - bcbio
+  - bioconda
+  - conda-forge
+  - defaults
+  - r
+dependencies:
+  - pysam
+  - python
+  - plotnine
+  - numpy
+  - pybedtools
+  - pandas
+  - scipy
+  - jupyter
+  - bioconductor-metaseq
+  - mygene
+  - salmon
+  - logomaker
+prefix: /Users/Kirsten/Applications/anaconda3/envs/pacbio
+
