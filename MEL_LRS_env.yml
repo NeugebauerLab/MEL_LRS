@@ -1,4 +1,4 @@
-name: pacbio
+name: MEL_LRS_env
 channels:
   - bcbio
   - bioconda
